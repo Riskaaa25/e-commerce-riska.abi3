@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Navigation Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1e2a38;
+    color: #fff;
+    }
+
+    .logo img {
+    height: 50px;
+    }
+
+    .main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    }
+
+    .main-navigation ul li {
+    position: relative;
+    }
+
+    .main-navigation ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    }
+
+    .main-navigation ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .main-navigation ul li:hover ul.dropdown {
+    display: block;
+    }
+
+    .search-bar {
+    display: flex;
+    }
+
+    .search-bar input {
+    padding: 5px;
+    border: none;
+    }
+
+    .search-bar button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #555;
+    color:  #fff;
+    }
+
+    .user-links a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    }
+
+    .breadcrumbs {
+    padding: 10px 20px;
+    background-color: #c3b1e1;
+    }
+
+    .breadcrumbs a {
+    text-decoration: none;
+    }
+
+    main {
+    display: flex;
+    padding: 20px;
+    }
+
+    h2 {
+    color: #1e2a38;
+    font-family: 'georgia';
+    }
+
+    .sidebar {
+    width: 50%;
+    padding: 20px;
+    background-color: #c3b1e1;
+    color: #fff;
+    text-align: justify;
+    }
+
+    .product-list {
+    width: 75%;
+    padding: 20px;
+    }
+
+    footer {
+    background-color:#1e2a38;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+
+    .footer-nav, .social-media, .payment-methods {
+    margin-bottom: 20px;
+    }
+
+    .footer-nav a, .newsletter-signup, .social-media a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    text-align: center;
+    }
+
+    .footer {
+    /* Gaya untuk elemen p dengan kelas "footer" */
+    background-color: #c3b1e1;
+    font-family: 'times new roman';
+    }
+
+    .newsletter-signup form {
+    display: flex;
+    }
+
+    .newsletter-signup input {
+    padding: 5px;
+    border: none;
+    margin-right: 10px;
+    }
+
+    .newsletter-signup button {
+    padding: 5px 10px;
+    border: none;
+    background-color:#555;
+    color: #fff;
+    }
+
+    .btn-grey {
+    background-color: #1e2a38;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    }
+
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="LOGOO.png" alt="Company Logo"></a>
+        </div>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Gamis Dress</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search products...">
+            <button>Search</button>
+        </div>
+        <div class="user-links">
+            <a href="login.html">Login</a>
+            <a href="cart.html">Cart (0)</a>
+        </div>
+    </header>
+
+<!-- Breadcrumbs -->
+    <nav class="breadcrumbs">
+        <a href="index.html">Home</a> &gt; 
+        <a href="#">Gamis Dress</a> &gt; 
+        <span>Produk Unggulan</span>
+    </nav>
+
+<!-- Main Content -->
+    <main>
+        <aside class="sidebar">
+            <h2>Filters</h2>
+            <form>
+                <label for="price">Price:</label>
+                <input type="range" id="price" name="price" min="0" max="1000">
+                <p><label for="brand">Brand:</label></p>
+                <select id="brand" name="brand">
+                    <option value="ZnB Gallery">ZnB Gallery</option>
+                    <option value="Jamise Syari">Jamise Syari</option>
+                    <option value="Shirin Zein">Shirin Zein</option>
+                </select>
+                <button type="submit">Apply Filters</button>
+            </form>
+                <section class="kategori" id="kategori">
+            <h2>Kategori Menu</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#GamisSatuSetHijab">Gamis Satu Set Hijab</a>
+                        <li><p><a href="#GamisNonSetHijab">Gamis Non Set Hijab</a></p>
+                    </ul>
+               </nav>
+               
+<!-- TENTANG KAMI -->
+            <section class="tentang-kami" id="tentang">
+                <h2>Tentang Kami</h2>
+                  <p>Selamat Datang di Mpiris F.M!🌸🌸</p>
+                  <p>Di Mpiris F.M, kami memahami bahwa setiap pakaian bukan sekadar kain, tapi bagian dari perjalanan dan identitas diri.</p>
+                  <p>Kami hadir dengan niat tulus menghadirkan busana muslimah yang nyaman, elegan, dan penuh makna.</p>
+                     Karena kamu layak tampil percaya diri tanpa harus mengorbankan nilai dan kesopanan.
+                     Setiap koleksi kami pilih dengan hati, agar kamu tidak hanya merasa indah di luar, tapi juga tenang dan nyaman di dalam. 
+                  <p>Terima kasih sudah mempercayai Mpiris F.M sebagai teman setiamu dalam mengekspresikan diri lewat busana yang bermakna!🌸🌸</p>
+            </section>
+        </aside>
+
+            <section class="produk-list">
+                <h2>Produk Unggulan</h2>
+    <!-- Produk items will be listed here -->
+            <div class="product">
+            <img src="MAHREEN.png"Product 1>
+              <h3>Mahreen Dress</h3>
+                <ul>
+                  <p>
+                    <strong>Deskripsi Produk:</strong><br>
+                        Mahreen Dress adalah pilihan tepat untuk wanita yang mengiginkan penampilan mewah dan elegan.
+                        Dengan desain yang ekslusif dan detail yang rumit, 
+                        dress ini cocok digunakan untuk acara-acara seperti pernikahan atau acara formal lainnya.</p>
+                  <p>
+                    <strong>Detail Produk:</strong><br>
+                       Bahan: Premium Ceruty Babydoll<br>
+                       Model: Gamis Sleting atas dan Lengan Kancing</br>
+                  <p>
+                    <strong>Ukuran:</strong>
+                       All size, muat ukuran S sampai Jumbo<br>
+                     - Lingkar dada: 110 cm<br>
+                     - Panjang baju: 136 cm<br>
+                     - Panjang lengan: 65 cm</p>
+                  <p>
+                    <strong>Warna:</strong>
+                       White, Sage, Maroon, Denim, Black, Gold</p>
+
+                  <p><strong>Keunggulan Produk:</strong><p></p>
+                    <ul>
+                      <li>Free Manset dan Belt</li>  
+                      <li>Ringan dan Flowy</li>
+                      <li>Nyaman dan Adem</li>
+                      <li>Tidak mudah Kusut</li>
+                      <li>Pilihan Warna yang Beragam</li>
+                    </ul>
+                  <p class="product-price">Rp.399.000</p> 
+                  <button class="btn-grey" type="button" onclick="Masukkankeranjang()">🛒Masukkan keranjang</button>
+                  <button class="btn-grey" type="button" onclick="Beli()">Beli</button>
+                </ul>
+            </div>
+
+        <article>
+            <div class="Produk Terbaru">
+            <img src="JENNA.png"Product 2>
+               <h3>Jenna Dress</h3>
+                <ul>
+                  <p>
+                    <strong>Deskripsi Produk:</strong><br>
+                        Jenna Dress adalah pilihan wanita yang menginginkan penampilan elegan dan anggun.
+                        Dengan desain yang simpel namun tetap feminin,
+                        Gamis ini cocok digunakan untuk berbagai kesempatan, baik untuk acara formal maupun sehari-hari.</p>
+                  <p>
+                    <strong>Detail Produk:</strong><br>
+                        Bahan: Arafah<br>
+                        Model: Model Lengan Abaya, Busui dan Wudhu Friendly</br>
+                  <p>
+                    <strong>Ukuran:</strong>
+                        Xs-Xxl</p>
+                  <p>
+                    <strong>Warna:</strong><br>
+                        Grey, Denim, Walnut, Bronze, Almond, Midnight, Pale Green, Jet Black, Broken White</p>
+                       
+                  <p><strong>Keunggulan Produk:</strong><p>
+                    <ul>
+                      <li>Bahan super Adem, Flowy dan Ringan</li>  
+                      <li>Model yang Minimalist dan Simple memberikan look yang Elegan</li>
+                      <li>Pilihan Warna Pastel yang gampang di mix & match dengan hijab square ataupun pashmina</li>
+                      <li>Tersedia berbagai ukuran</li>
+                    </ul>
+                  <p class="product-price">Rp.279.000</p> 
+                  <button class="btn-grey" type="button" onclick="Masukkankeranjang()">🛒Masukkan keranjang</button>
+                  <button class="btn-grey" type="button" onclick="Beli()">Beli</button>
+                </ul>
+            </div>
+        </article>
+
+        <article>
+            <div class="produk Lainnya">
+            <img src="SHIRINZIEN.png"Product 3>
+              <h3>Shirinzien Haerumi</h3>
+                <ul>
+                  <p>
+                    <strong>Deskripsi Produk:</strong><br>
+                       Shirinzien Haerumi adalah pilihan yang cocok digunakan
+                       untuk seorang wanita yang menginginkan penampilan mewah tetapi terlihat elegan.
+                       Dengan desain yang ekslusif dan rumit, gamis ini cocok digunakan untuk acara formal.</p>
+                  <p>
+                    <strong>Detail Produk:</strong><br>
+                       Bahan: Busui & Wudhu friendly, Berkerah, Pita leher, dan Lengan balon<br>
+                       Model: Model Lengan Abaya, Busui dan Wudhu Friendly</br>
+                  <p>
+                    <strong>Ukuran:</strong>
+                       S-3XL</p>
+                  <p>
+                    <strong>Warna:</strong>
+                       Grey, Denim, Walnut, Bronze, Almond, Midnight, Pale Green, Jet Black, Broken White</p>
+                  <p>
+                    <strong>Keunggulan Produk:</strong><br>
+                    <ul>
+                      <li>Bahan tidak panas</li>
+                      <li>Bahan jatuh & tidak menyusut</li>
+                      <li>Bahan tidak mudah kusut dan ringan digunakan</li>
+                      <li>Tersedia berbagai ukuran</li>
+                    </ul>
+                    <p class="product-price">Rp.250.000</p> 
+                    <button class="btn-grey" type="button" onclick="Masukkankeranjang()">🛒Masukkan keranjang</button>
+                    <button class="btn-grey" type="button" onclick="Beli()">Beli</button>
+                </ul>
+            </div>
+        </article>
+        </section>
+    </main>
+
+<!-- Footer -->
+    <footer>
+        <div class="footer-nav">
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        <div class="newsletter-signup"></div>
+            <h3>Subscribe to our newsletter</h3>
+              <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+        </div>
+        <div class="social-media">
+            <img src="Logo Facebook.png" alt="Logo Facebook">
+            <img src="Logo Instagram.png" alt="Logo Instagram">
+            <img src="Logo Twitter.png" alt="Logo Twitter">
+        <div class="payment-methods">
+            <img src="VISA.png" alt="VISA">
+            <img src="BNI.png" alt="BNI">
+            <img src="PAYPAL.png" alt="PAYPAL">
+        </div>
+    </footer>
+        <footer class="footer">
+        <p>&copy;2025 Mpiris F.M. semua hak dilindungi</P>
+        </footer>
+</body>
+</html>
